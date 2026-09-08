@@ -1,0 +1,106 @@
+/* =====================================================
+   简约风格个人名片 —— 样式文件
+   结构在 index.html 中，本文件只负责外观样式
+   ===================================================== */
+
+/* ---------- 全局重置：统一各浏览器的默认表现 ---------- */
+* {
+  margin: 0;          /* 清除默认外边距 */
+  padding: 0;         /* 清除默认内边距 */
+  box-sizing: border-box; /* 边框与内边距计入宽度，方便布局 */
+}
+
+/* ---------- 页面基础 ---------- */
+body {
+  min-height: 100vh;               /* 保证整屏可滚动区域 */
+  display: flex;                   /* 弹性盒模型，用于居中布局 */
+  justify-content: center;         /* 水平居中卡片 */
+  align-items: center;             /* 垂直居中卡片 */
+  background: linear-gradient(160deg, #eef3f9 0%, #e3eaf1 100%); /* 浅灰蓝渐变背景 */
+  font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", Arial, sans-serif; /* 中文字体优先 */
+  color: #333;                     /* 默认文字颜色 */
+}
+
+/* ---------- 名片卡片 ---------- */
+.card {
+  width: 380px;                    /* 卡片固定宽度 */
+  background: #fff;                /* 白色卡片背景，与页面背景形成对比 */
+  border-radius: 12px;             /* 12px 圆角 */
+  box-shadow:                       /* 双层柔和阴影：远处大而浅 + 近处小而深 */
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 2px 6px  rgba(0, 0, 0, 0.04);
+  padding: 36px 28px;              /* 让卡片内容四周留白，保持简约感 */
+  transition:                       /* 悬停动画的过渡设置 */
+    transform 0.3s ease,            /* 上浮动效：0.3 秒平滑过渡 */
+    box-shadow 0.3s ease;           /* 阴影同步加深，增强立体感 */
+}
+
+/* 鼠标悬停时：卡片轻微上浮并加深阴影 */
+.card:hover {
+  transform: translateY(-8px);     /* 向上移动 8px，产生“抬起”效果 */
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.12),
+    0 4px 10px  rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- 圆形头像 ---------- */
+.avatar {
+  display: block;                  /* 图片改为块级元素，方便用 margin 居中 */
+  width: 96px;                     /* 头像直径 96px */
+  height: 96px;
+  margin: 0 auto;                  /* 水平居中 */
+  border-radius: 50%;              /* 50% 圆角 = 正圆形 */
+  border: 3px solid #fff;          /* 白色描边，与卡片产生层次感 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 头像自身的柔和阴影 */
+  object-fit: cover;               /* 图片按比例裁剪填满圆形，不变形 */
+}
+
+/* ---------- 姓名 ---------- */
+.name {
+  margin-top: 18px;                /* 与头像保持间距 */
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;              /* 文字居中 */
+  letter-spacing: 2px;             /* 字间距稍宽，提升精致感 */
+}
+
+/* ---------- 职位 ---------- */
+.role {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #8a94a6;                  /* 弱化职位颜色，突出主次关系 */
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ---------- 分隔线 ---------- */
+.divider {
+  border: none;                    /* 去掉浏览器默认立体边框 */
+  border-top: 1px solid #e6eaf0;   /* 只保留一条浅色细线 */
+  margin: 20px auto;               /* 上下留白 */
+  width: 56px;                     /* 短线条，比全宽更简约 */
+}
+
+/* ---------- 联系方式列表 ---------- */
+.contact-list {
+  list-style: none;                /* 去掉列表默认圆点 */
+  display: flex;
+  flex-direction: column;          /* 纵向排列，三项各占一行 */
+  gap: 12px;                       /* 项与项之间 12px 间距 */
+}
+
+/* 单个联系方式：图标 + 文字 */
+.contact-item {
+  display: flex;
+  align-items: center;             /* 图标与文字垂直居中对齐 */
+  gap: 10px;                       /* 图标与文字之间留白 */
+  text-decoration: none;           /* 去掉链接下划线，保持简洁 */
+  color: #555;
+  font-size: 14px;
+  transition: color 0.2s ease;     /* 悬停变色过渡 */
+}
+
+/* 悬停联系方式时文字变为主题蓝 */
+.contact-item:hover {
+  color: #2f6fed;
+}

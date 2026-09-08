@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人名片</title>
+  <!-- 引入外部样式文件（样式与结构分离书写） -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= 名片卡片 ================= -->
+  <div class="card">
+
+    <!-- 头像：替换 src 为自己的照片即可 -->
+    <img class="avatar" src="https://i.pravatar.cc/160" alt="头像">
+
+    <!-- 姓名 -->
+    <h1 class="name">张伟</h1>
+
+    <!-- 职位 -->
+    <p class="role">前端开发工程师</p>
+
+    <!-- 分隔线 -->
+    <hr class="divider">
+
+    <!-- 联系方式列表 -->
+    <ul class="contact-list">
+
+      <!-- 邮箱 -->
+      <li>
+        <a class="contact-item" href="mailto:zhangwei@example.com">
+          <!-- 邮箱图标 -->
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="5" y="5" width="14" height="12" rx="1"></rect>
+            <path d="M12 5 L8 9 L16 9 Z"></path>
+          </svg>
+          <span>zhangwei@example.com</span>
+        </a>
+      </li>
+
+      <!-- 电话 -->
+      <li>
+        <a class="contact-item" href="tel:+8613800000000">
+          <!-- 电话图标 -->
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="6" y="3" width="12" height="18" rx="3"></rect>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+          </svg>
+          <span>+86 138-0000-0000</span>
+        </a>
+      </li>
+
+      <!-- 所在地 -->
+      <li>
+        <a class="contact-item" href="https://maps.google.com" target="_blank" rel="noopener">
+          <!-- 位置图标 -->
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="7" r="6"></circle>
+            <line x1="12" y1="10" x2="12" y2="21"></line>
+          </svg>
+          <span>北京市 · 朝阳区</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</body>
+</html>
