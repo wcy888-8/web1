@@ -86,7 +86,8 @@ body {
   list-style: none;                /* 去掉列表默认圆点 */
   display: flex;
   flex-direction: column;          /* 纵向排列，三项各占一行 */
-  gap: 12px;                       /* 项与项之间 12px 间距 */
+  gap: 12px;    
+  align-items: center;                   /* 项与项之间 12px 间距 */
 }
 
 /* 单个联系方式：图标 + 文字 */
